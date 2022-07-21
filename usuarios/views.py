@@ -39,6 +39,6 @@ def login(request):
         else:
             return HttpResponse('Email ou senha ivalidos')
 
-@login_required
+@login_required(login_url='/auth/login/')
 def plataforma(request):
     return HttpResponse('plataforma')
